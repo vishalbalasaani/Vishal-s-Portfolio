@@ -37,7 +37,7 @@ export default function Hero() {
           
           {/* Mask applied directly to the image wrapper so the fade tightly follows the image size */}
           <div 
-            className="relative w-[90%] sm:w-[80%] md:w-[70%] lg:w-[60%] xl:w-[55%] aspect-square md:mr-16 lg:mr-24"
+            className="relative w-[80%] sm:w-[70%] md:w-[55%] lg:w-[45%] xl:w-[40%] aspect-square md:mr-16 lg:mr-24"
             style={{
               WebkitMaskImage: "radial-gradient(circle at 50% 50%, black 45%, transparent 75%)",
               maskImage: "radial-gradient(circle at 50% 50%, black 45%, transparent 75%)"
