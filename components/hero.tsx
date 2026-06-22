@@ -33,11 +33,11 @@ export default function Hero() {
       {/* ===== PHOTO — absolute positioned, right side, gradient blend ===== */}
       <div className="absolute inset-0 pointer-events-none">
         {/* Photo container — vertically centered to align with text */}
-        <div className="absolute inset-y-0 right-0 w-full md:w-[60%] lg:w-[55%] flex items-center justify-end">
+        <div className="absolute inset-y-0 right-0 w-full md:w-[60%] lg:w-[55%] flex items-center justify-center md:justify-end">
 
           {/* Mask applied directly to the image wrapper so the fade tightly follows the image size */}
           <div
-            className="relative w-[85%] sm:w-[75%] md:w-[80%] lg:w-[75%] xl:w-[70%] aspect-square md:mr-8 lg:mr-12"
+            className="relative w-[140%] sm:w-[110%] md:w-[80%] lg:w-[75%] xl:w-[70%] aspect-square md:mr-8 lg:mr-12"
             style={{
               WebkitMaskImage: "radial-gradient(circle at 50% 50%, black 45%, transparent 75%)",
               maskImage: "radial-gradient(circle at 50% 50%, black 45%, transparent 75%)"
