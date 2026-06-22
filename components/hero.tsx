@@ -50,7 +50,7 @@ export default function Hero() {
             <img
               src="/my-photo-final.png?v=1"
               alt="Profile Picture"
-              className="w-[90%] md:w-[80%] lg:w-[70%] h-auto object-contain object-bottom"
+              className="w-[90%] md:w-[80%] lg:w-[70%] h-auto object-contain object-bottom mix-blend-lighten"
             />
           </div>
 
