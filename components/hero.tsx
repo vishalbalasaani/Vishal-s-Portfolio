@@ -47,13 +47,10 @@ export default function Hero() {
               maskImage: "linear-gradient(to top, transparent 0%, black 15%, black 100%)"
             }}
           >
-            <Image
-              src="/profile-new.png"
-              alt="Vishal Balasaani — AI Automation Consultant"
-              fill
-              priority
-              className="object-cover object-top"
-              sizes="(max-width: 768px) 100vw, 55vw"
+            <img
+              src="/my-photo-final.png?v=1"
+              alt="Profile Picture"
+              className="w-full h-full object-cover object-top"
             />
           </div>
 
