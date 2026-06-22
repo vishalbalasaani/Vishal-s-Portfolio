@@ -34,9 +34,9 @@ export default function Hero() {
       <div className="absolute inset-0 pointer-events-none">
         {/* Photo container — vertically centered to align with text */}
         <div className="absolute inset-y-0 right-0 w-full md:w-[60%] lg:w-[55%] flex items-center justify-end">
-          
+
           {/* Mask applied directly to the image wrapper so the fade tightly follows the image size */}
-          <div 
+          <div
             className="relative w-[85%] sm:w-[75%] md:w-[80%] lg:w-[75%] xl:w-[70%] aspect-square md:mr-8 lg:mr-12"
             style={{
               WebkitMaskImage: "radial-gradient(circle at 50% 50%, black 45%, transparent 75%)",
