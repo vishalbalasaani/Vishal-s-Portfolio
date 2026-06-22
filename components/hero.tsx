@@ -30,78 +30,22 @@ export default function Hero() {
       id="home"
       className="relative min-h-screen flex items-center overflow-hidden"
     >
-      {/* ===== PHOTO — absolute positioned, right side, gradient blend ===== */}
+      {/* Background gradients for vibe */}
       <div className="absolute inset-0 pointer-events-none">
-        {/* Photo container — positioned to the right */}
-        <div
-          className="absolute top-0 right-0 bottom-0 w-full md:w-[60%] lg:w-[55%]"
-          style={{
-            WebkitMaskImage: "linear-gradient(to right, transparent 0%, black 20%, black 100%)",
-            maskImage: "linear-gradient(to right, transparent 0%, black 20%, black 100%)"
-          }}
-        >
-          <div
-            className="absolute inset-0 flex items-end justify-center md:justify-end"
-            style={{
-              WebkitMaskImage: "linear-gradient(to top, transparent 0%, black 15%, black 100%)",
-              maskImage: "linear-gradient(to top, transparent 0%, black 15%, black 100%)"
-            }}
-          >
-            <img
-              src="/my-photo-final.png?v=1"
-              alt="Profile Picture"
-              className="w-[90%] md:w-[80%] lg:w-[70%] h-auto object-contain object-bottom mix-blend-lighten"
-            />
-          </div>
-
-          {/* Left gradient blend — fades photo into background */}
-          <div
-            className="absolute inset-0"
-            style={{
-              background:
-                "linear-gradient(to right, #0A0A0A 0%, #0A0A0A 5%, rgba(10,10,10,0.95) 15%, rgba(10,10,10,0.7) 30%, rgba(10,10,10,0.3) 45%, transparent 65%)",
-            }}
-          />
-
-          {/* Bottom gradient blend */}
-          <div
-            className="absolute inset-0"
-            style={{
-              background:
-                "linear-gradient(to top, #0A0A0A 0%, rgba(10,10,10,0.6) 15%, transparent 35%)",
-            }}
-          />
-
-          {/* Top gradient blend */}
-          <div
-            className="absolute inset-0"
-            style={{
-              background:
-                "linear-gradient(to bottom, #0A0A0A 0%, rgba(10,10,10,0.4) 8%, transparent 20%)",
-            }}
-          />
-
-          {/* Subtle brand color tint overlay */}
-          <div className="absolute inset-0 bg-primary/[0.03]" />
-        </div>
-
-        {/* Mobile overlay — stronger fade for text readability */}
-        <div
-          className="absolute inset-0 md:hidden"
-          style={{
-            background:
-              "linear-gradient(to bottom, rgba(10,10,10,0.85) 0%, rgba(10,10,10,0.7) 40%, rgba(10,10,10,0.9) 100%)",
-          }}
-        />
+          {/* Subtle background ambient light */}
+          <div className="absolute top-1/4 right-1/4 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[100px]" />
+          <div className="absolute bottom-0 left-0 w-full h-[30vh] bg-gradient-to-t from-[#0A0A0A] to-transparent" />
       </div>
 
       {/* ===== CONTENT ===== */}
-      <div className="relative z-10 mx-auto max-w-6xl px-6 lg:px-8 w-full pt-28 pb-20 md:pt-32 md:pb-24">
+      <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 w-full pt-28 pb-20 md:pt-32 md:pb-24 flex flex-col md:flex-row items-center gap-12 lg:gap-20">
+        
+        {/* TEXT COLUMN */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="max-w-xl lg:max-w-lg"
+          className="flex-1 max-w-2xl"
         >
           {/* Badge */}
           <motion.div
@@ -166,6 +110,30 @@ export default function Hero() {
             Helping Businesses Automate, Scale, And Save Time
           </motion.p>
         </motion.div>
+
+        {/* IMAGE COLUMN */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.3, duration: 0.8 }}
+          className="flex-1 w-full max-w-md lg:max-w-lg relative flex items-center justify-center"
+        >
+           {/* Radial mask to softly fade out all edges so the box completely disappears */}
+           <div 
+             className="relative w-full aspect-square"
+             style={{
+               WebkitMaskImage: "radial-gradient(circle at center, black 45%, transparent 70%)",
+               maskImage: "radial-gradient(circle at center, black 45%, transparent 70%)"
+             }}
+           >
+              <img 
+                 src="/my-photo-final.png?v=1" 
+                 alt="Vishal Balasaani"
+                 className="w-full h-full object-contain mix-blend-lighten"
+              />
+           </div>
+        </motion.div>
+
       </div>
     </section>
   );
