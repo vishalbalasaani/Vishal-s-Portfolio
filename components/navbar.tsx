@@ -50,13 +50,16 @@ export default function Navbar() {
   }, []);
 
   const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    // If it's a hash link, we can immediately set the active state for a snappy UI
+    e.preventDefault();
     if (href.startsWith("#")) {
-      setActiveSection(href.substring(1));
+      const sectionId = href.substring(1);
+      setActiveSection(sectionId);
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
     }
-    setTimeout(() => {
-      setIsOpen(false);
-    }, 150);
+    setIsOpen(false);
   };
 
   return (
