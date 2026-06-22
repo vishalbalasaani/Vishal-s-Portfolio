@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Clash Display';
+  src: url('/fonts/ClashDisplay-Variable.woff2') format('woff2');
+  font-weight: 200 700;
+  font-display: swap;
+  font-style: normal;
+}
+
+@theme inline {
+  --color-background: #0A0A0A;
+  --color-foreground: #FAFAFA;
+  --color-primary: #39393A;
+  --color-primary-light: #4A4A4B;
+  --color-primary-lighter: #aed3d9;
+  --color-card: #121214;
+  --color-muted: #A1A1AA;
+  --color-border: #27272A;
+  --color-accent: #18181B;
+
+  --font-heading: 'Clash Display', 'Sora', system-ui, sans-serif;
+  --font-body: 'Sora', system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: 0.015em;
+}
+
+/* Global Professional Typography Spacing */
+h1, h2 {
+  letter-spacing: -0.02em;
+}
+
+h3, h4, h5, h6 {
+  letter-spacing: 0.01em;
+}
+
+a, button {
+  letter-spacing: 0.025em;
+}
+
+/* Fix browser autofill turning inputs white in dark mode */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+textarea:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 50px var(--color-background) inset !important;
+  -webkit-text-fill-color: var(--color-foreground) !important;
+  transition: background-color 5000s ease-in-out 0s;
+  caret-color: var(--color-foreground);
+}
+
+/* Selection */
+::selection {
+  background-color: #6A9AA3;
+  color: #0A0A0A;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0A0A0A;
+}
+::-webkit-scrollbar-thumb {
+  background: #27272A;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #6A9AA3;
+}
+
+/* Glass morphism utility */
+.glass {
+  background: rgba(18, 18, 20, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(39, 39, 42, 0.6);
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #aed3d9 0%, #8bbac2 50%, #6A9AA3 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Gradient border */
+.gradient-border {
+  background: linear-gradient(135deg, #6A9AA3, #aed3d9);
+  padding: 3px;
+  border-radius: inherit;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-100%); }
+}
+
+.animate-marquee {
+  animation: marquee 25s linear infinite;
+}
+
+.group:hover .animate-marquee {
+  animation-play-state: paused;
+}

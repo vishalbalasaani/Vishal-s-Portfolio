@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+  <path fill="#FFA000" d="M7 14l17 2 17-2-2-8H9z"/>
+  <path fill="#F57F17" d="M24 16L7 14l1.5 22L24 44l15.5-8L41 14z"/>
+  <path fill="#FFCA28" d="M24 16L7 14l17-10 17 10z"/>
+  <path fill="#FFA000" d="M24 4L7 14h34z"/>
+  <path fill="#F57F17" d="M24 16v28l15.5-8L41 14z"/>
+  <path fill="#FFCA28" d="M24 4v12l17-2z"/>
+</svg>
