@@ -51,15 +51,23 @@ export default function Navbar() {
 
   const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
+    setIsOpen(false); // Close the menu immediately
+    
     if (href.startsWith("#")) {
       const sectionId = href.substring(1);
       setActiveSection(sectionId);
-      const element = document.getElementById(sectionId);
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
-      }
+      
+      // Wait a tiny bit for the mobile menu closing animation to begin 
+      // before hijacking the scroll thread, which fixes iOS Safari glitches.
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          // Calculate exact position minus the 80px fixed navbar
+          const y = element.getBoundingClientRect().top + window.scrollY - 80;
+          window.scrollTo({ top: y, behavior: "smooth" });
+        }
+      }, 100);
     }
-    setIsOpen(false);
   };
 
   return (
