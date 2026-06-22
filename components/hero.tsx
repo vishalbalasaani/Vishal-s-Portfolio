@@ -41,7 +41,7 @@ export default function Hero() {
           }}
         >
           <div
-            className="absolute inset-0"
+            className="absolute inset-0 flex items-end justify-center md:justify-end"
             style={{
               WebkitMaskImage: "linear-gradient(to top, transparent 0%, black 15%, black 100%)",
               maskImage: "linear-gradient(to top, transparent 0%, black 15%, black 100%)"
@@ -50,7 +50,7 @@ export default function Hero() {
             <img
               src="/my-photo-final.png?v=1"
               alt="Profile Picture"
-              className="w-full h-full object-cover object-top"
+              className="w-[90%] md:w-[80%] lg:w-[70%] h-auto object-contain object-bottom"
             />
           </div>
 
