@@ -48,7 +48,7 @@ export default function Hero() {
             }}
           >
             <Image
-              src="/profile-final.png"
+              src="/profile-new.png"
               alt="Vishal Balasaani — AI Automation Consultant"
               fill
               priority
